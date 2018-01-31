@@ -34,9 +34,17 @@
     "precommit": "lint-staged",
     "postinstall": "ts-node tools/init"
   },
+  "prettier": {
+    "printWidth": 80,
+    "useTabs": true,
+    "tabWidth": 1,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "semi": true
+  },
   "lint-staged": {
     "{src,test}/**/*.ts": [
-      "prettier --write --no-semi --single-quote",
+      "prettier --write",
       "git add"
     ]
   },
