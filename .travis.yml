@@ -16,4 +16,6 @@ script:
 after_success:
   - npm run report-coverage
   - npm run deploy-docs
+  - npm run changelog
   - npm run semantic-release
+  - git stash && git checkout -B develop && git stash pop && git add .
