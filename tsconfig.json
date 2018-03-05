@@ -17,7 +17,6 @@
     "strictNullChecks": true,
     "noImplicitThis": true,
     "typeRoots": [
-    "typeRoots": [
       "node_modules/@types"
     ]
   },
