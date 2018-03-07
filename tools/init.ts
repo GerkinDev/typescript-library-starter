@@ -181,6 +181,8 @@ function setupLibrary(libraryName: string) {
   renameItems(libraryName)
 
   finalize()
+  
+  createBranches()
 
   console.log(colors.cyan("OK, you're all set. Happy coding!! ;)\n"))
 }
@@ -277,4 +279,17 @@ function finalize() {
   console.log(colors.green("Git hooks set up"))
 
   console.log("\n")
+}
+
+/**
+ * Create staging & develop branches
+ */
+function createBranches(){
+  console.log(colors.underline.white("Creating branches"));
+  
+  // Create branch staging
+  exec('git checkout -b staging')
+  
+  // Create branch develop & check it out
+  exec('git checkout -b develop')
 }
