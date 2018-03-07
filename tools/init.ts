@@ -183,8 +183,18 @@ function setupLibrary(libraryName: string) {
   finalize()
   
   createBranches()
-
+  
   console.log(colors.cyan("OK, you're all set. Happy coding!! ;)\n"))
+  
+  console.log(colors.green("What to do next?"))
+  console.log(
+    colors.cyan(" * Add ") +
+    colors.cyan.bold("`CC_TEST_REPORTER_ID`") +
+    colors.cyan(" variable to your ") + 
+    colors.cyan.bold("travis.ci") +
+    colors.cyan(" configuration. Check out:"))
+  console.log("   * https://travis-ci.org/" + colors.bold("my-user") + "/" + colors.bold("my-repo") + "/settings")
+  console.log("   * https://codeclimate.com/repos/" + colors.bold("repo-id") + "/settings/test_reporter")
 }
 
 /**
